@@ -10,5 +10,5 @@ package jugador;
  * @author Daniel Gómez
  */
 public interface jugador {
-    
+    void play();
 }
