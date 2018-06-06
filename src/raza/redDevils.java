@@ -9,6 +9,10 @@ package raza;
  *
  * @author Daniel Gómez
  */
-public interface raza {
-    void create();
+public class redDevils implements raza{
+    @Override
+    public void create() {
+        
+    }
+    
 }

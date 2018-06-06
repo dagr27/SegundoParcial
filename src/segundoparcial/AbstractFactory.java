@@ -6,6 +6,7 @@
 package segundoparcial;
 
 import jugador.jugador;
+import raza.raza;
 
 /**
  *
@@ -13,4 +14,5 @@ import jugador.jugador;
  */
 public interface AbstractFactory {
     jugador getJugador(int jugador);
+    raza getRaza(int raza);
 }

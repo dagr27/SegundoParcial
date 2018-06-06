@@ -3,30 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jugador;
+package raza;
 
-import raza.raza;
+import jugador.jugador;
 import segundoparcial.AbstractFactory;
 
 /**
  *
  * @author Daniel Gómez
  */
-public class jugadorFactory implements AbstractFactory {
+public class razaFactory implements AbstractFactory{
+
     @Override
     public jugador getJugador(int jugador) {
-        switch(jugador){
-            case 1:
-                return new jugador1();
-            case 2:
-                return new jugador2();
-        }
         return null;
     }
 
     @Override
     public raza getRaza(int raza) {
+        switch(raza){
+            case 1:
+                return new gunners();
+            case 2:
+                return new redDevils();
+            case 3:
+                return new kops();
+        }
         return null;
     }
+    
     
 }
