@@ -9,6 +9,10 @@ package milicia;
  *
  * @author Daniel Gómez
  */
-public interface milicia {
-    void train();
+public class soldado implements milicia {
+    @Override
+    public void train() {
+        
+    }
+    
 }

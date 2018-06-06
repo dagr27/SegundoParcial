@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package raza;
+package milicia;
 
 import jugador.jugador;
-import milicia.milicia;
+import raza.raza;
 import segundoparcial.AbstractFactory;
 
 /**
  *
  * @author Daniel Gómez
  */
-public class razaFactory implements AbstractFactory{
+public class miliciaFactory implements AbstractFactory {
 
     @Override
     public jugador getJugador(int jugador) {
@@ -22,21 +22,18 @@ public class razaFactory implements AbstractFactory{
 
     @Override
     public raza getRaza(int raza) {
-        switch(raza){
-            case 1:
-                return new gunners();
-            case 2:
-                return new redDevils();
-            case 3:
-                return new kops();
-        }
         return null;
     }
 
     @Override
     public milicia getMilicia(int milicia) {
+        switch(milicia){
+            case 1:
+                return new soldado();
+            case 2:
+                return new ejercito();
+    }
         return null;
     }
-    
     
 }

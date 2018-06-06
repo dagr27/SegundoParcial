@@ -5,6 +5,7 @@
  */
 package jugador;
 
+import milicia.milicia;
 import raza.raza;
 import segundoparcial.AbstractFactory;
 
@@ -26,6 +27,11 @@ public class jugadorFactory implements AbstractFactory {
 
     @Override
     public raza getRaza(int raza) {
+        return null;
+    }
+
+    @Override
+    public milicia getMilicia(int milicia) {
         return null;
     }
     

@@ -9,6 +9,10 @@ package milicia;
  *
  * @author Daniel Gómez
  */
-public interface milicia {
-    void train();
+public class ejercito implements milicia{
+    @Override
+    public void train() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }
