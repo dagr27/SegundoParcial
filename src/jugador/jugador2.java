@@ -10,9 +10,11 @@ package jugador;
  * @author Daniel Gómez
  */
 public class jugador2 implements jugador {
+    jugadorL lista = jugador1.lista;
     @Override
     public void play() {
-        
+        lista.bienvenida(2);
+        lista.add();
     }
     
 }

@@ -5,17 +5,23 @@
  */
 package segundoparcial;
 
+import jugador.jugador;
+
+
+
 /**
  *
  * @author Daniel Gómez
  */
 public class SegundoParcial {
-
-    /**
-     * @param args the command line arguments
-     */
+    static int fase = 0;
     public static void main(String[] args) {
-        // TODO code application logic here
+        AbstractFactory factory;
+        factory = FactoryProducer.getFactory("jugador");
+        jugador player1 = factory.getJugador(1);
+        jugador player2 = factory.getJugador(2);
+        player1.play();
+        player2.play();
     }
     
 }

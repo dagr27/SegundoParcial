@@ -41,6 +41,10 @@ public class jugadorL {
     public void show(){
         
     }
+    public void bienvenida(int player){
+        System.out.println("----- Bienvenido Jugador "+ player +" -----");
+        System.out.println("Ingrese los datos que acontinuacion se le solicitan:");
+    }
     
     
 }
