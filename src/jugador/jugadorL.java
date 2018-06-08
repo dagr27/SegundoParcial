@@ -16,9 +16,10 @@ public class jugadorL {
     public jugadorL(){
         jugador = new ArrayList<>();
     }
-    public void add(){
+    public void add(int id){
         atrJugador player = new atrJugador();
         jugador.add(player);
+        player.setId(id);
         System.out.println("Ingrese su nickName");
         player.setUser(leer.nextLine());
         System.out.println("Ingrese su nombre");
@@ -38,12 +39,17 @@ public class jugadorL {
             throw new Exception("Ingrese un valor correcto");
         }
     }
-    public void show(){
-        
+    public void show(int id){
+        for(atrJugador player : jugador) {
+            if(player.id == id){
+                System.out.println("NickName: "+player.usuario+", Nombre: "+player.nombre+", Raza: "+player.Raza);
+                break;
+            }            
+        }
     }
+    
     public void bienvenida(int player){
         System.out.println("----- Bienvenido Jugador "+ player +" -----");
-        System.out.println("Ingrese los datos que acontinuacion se le solicitan:");
     }
     
     

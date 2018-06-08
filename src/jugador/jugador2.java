@@ -13,8 +13,14 @@ public class jugador2 implements jugador {
     jugadorL lista = jugador1.lista;
     @Override
     public void play() {
+        
+    }
+
+    @Override
+    public void welcome() {
         lista.bienvenida(2);
-        lista.add();
+        lista.add(2);
+        lista.show(2);
     }
     
 }

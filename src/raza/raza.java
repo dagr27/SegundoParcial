@@ -9,6 +9,8 @@ package raza;
  *
  * @author Daniel Gómez
  */
+
 public interface raza {
+    razaL lista = new razaL();
     void create();
 }

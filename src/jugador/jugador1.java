@@ -11,10 +11,17 @@ package jugador;
  */
 public class jugador1 implements jugador{
     static jugadorL lista = new jugadorL();
+    
     @Override
     public void play() {
+        
+    }
+
+    @Override
+    public void welcome() {
         lista.bienvenida(1);
-        lista.add();
+        lista.add(1);
+        lista.show(1);
     }
     
 }

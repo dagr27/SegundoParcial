@@ -10,13 +10,10 @@ package raza;
  * @author Daniel Gómez
  */
 public class kops implements raza {
-    atrRaza kops = new atrRaza();
+    razaL razas = raza.lista;
     @Override
     public void create() {
-        kops.setId(1);
-        kops.setNombre("Kops");
-        kops.setDescripcion("Una raza muy temida por el resto de la gente");
-        kops.setFortaleza("Fuerza");
+        razas.add(3);
     }
     
 }

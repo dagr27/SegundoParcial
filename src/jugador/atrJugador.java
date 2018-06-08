@@ -10,16 +10,21 @@ import java.util.Scanner;
  * @author Daniel Gómez
  */
 public class atrJugador {
+    int id;
     String usuario;
     String nombre;
     String Raza;
     public atrJugador(){
         
     }
-    public atrJugador(String user, String nombre, String raza){
+    public atrJugador(int id, String user, String nombre, String raza){
+        this.id = id;
         this.usuario = user;
         this.nombre = nombre;
         this.Raza = raza;
+    }
+    public void setId(int id){
+        this.id = id;
     }
     public void setUser(String user){
         this.usuario = user;
@@ -29,6 +34,9 @@ public class atrJugador {
     }
     public void setRaza(String raza){
         this.Raza = raza;
+    }
+    public int getId(){
+        return this.id;
     }
     public String getUsuario(){
         return this.usuario;

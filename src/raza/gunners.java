@@ -10,9 +10,10 @@ package raza;
  * @author Daniel Gómez
  */
 public class gunners implements raza {
+    razaL razas = raza.lista;
     @Override
     public void create() {
-        
+        razas.add(1);
     }
     
 }
