@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package jugador;
-import java.util.Scanner;
 /**
  *
  * @author Daniel Gómez

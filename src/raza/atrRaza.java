@@ -14,6 +14,9 @@ public class atrRaza {
     String nombre;
     String fortaleza;
     String descripcion;
+    int idPlayer;
+    
+    
     public atrRaza(){}
     public atrRaza(int id, String nombre, String fortaleza, String desc){
         this.id = id ;

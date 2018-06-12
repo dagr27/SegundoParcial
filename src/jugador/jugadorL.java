@@ -47,7 +47,14 @@ public class jugadorL {
             }            
         }
     }
-    
+    public atrJugador returnPLayer(int id){
+        for(atrJugador player : jugador) {
+            if(player.id == id){
+                return player;
+            }            
+        }
+        return null;
+    }
     public void bienvenida(int player){
         System.out.println("----- Bienvenido Jugador "+ player +" -----");
     }

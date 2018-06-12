@@ -9,6 +9,10 @@ package edificacion;
  *
  * @author Daniel Gómez
  */
-public interface edificacion {
-    void construir();
+public class recursos implements edificacion {
+    @Override
+    public void construir() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }

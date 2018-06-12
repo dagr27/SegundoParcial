@@ -10,6 +10,7 @@ package jugador;
  * @author Daniel Gómez
  */
 public interface jugador {
+    menu menu = new menu();
     void welcome();
     void play();
 }
