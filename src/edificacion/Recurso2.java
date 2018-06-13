@@ -9,11 +9,10 @@ package edificacion;
  *
  * @author Daniel Gómez
  */
-public class fabrica implements edificacion{
+public class Recurso2 implements edificacion{
     @Override
     public void construir(int id, String tipo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
     
 }

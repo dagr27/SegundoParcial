@@ -5,6 +5,7 @@
  */
 package milicia;
 
+import edificacion.edificacion;
 import jugador.jugador;
 import raza.raza;
 import segundoparcial.AbstractFactory;
@@ -33,6 +34,11 @@ public class miliciaFactory implements AbstractFactory {
             case 2:
                 return new ejercito();
     }
+        return null;
+    }
+
+    @Override
+    public edificacion getEdificacion(int edificacion) {
         return null;
     }
     

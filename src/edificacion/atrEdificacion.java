@@ -13,11 +13,11 @@ public class atrEdificacion {
     int id;
     int vida;
     String tipo;
-    String player;
+    int player;
     int precio;
     
     public void atrJugador(){}
-    public void atrJugador(int id, int vida, String tipo, String player, int precio){
+    public void atrJugador(int id, int vida, String tipo, int player, int precio){
         this.id = id;
         this.vida = vida;
         this.tipo = tipo;
@@ -33,7 +33,7 @@ public class atrEdificacion {
     public void setTipo(String tipo){
         this.tipo = tipo;
     }
-    public void setPlayer(String player){
+    public void setPlayer(int player){
         this.player = player;
     }
     public void setPrecio(int precio){
@@ -48,7 +48,7 @@ public class atrEdificacion {
     public String getTipo(){
         return this.tipo;
     }
-    public String getPlayer(){
+    public int getPlayer(){
         return this.player;
     }
     public int getPrecio(){

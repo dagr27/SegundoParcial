@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package raza;
+package edificacion;
 
-import edificacion.edificacion;
 import jugador.jugador;
 import milicia.milicia;
+import raza.raza;
 import segundoparcial.AbstractFactory;
 
 /**
  *
  * @author Daniel Gómez
  */
-public class razaFactory implements AbstractFactory{
+public class edificacionFactory implements AbstractFactory{
 
     @Override
     public jugador getJugador(int jugador) {
@@ -23,14 +23,6 @@ public class razaFactory implements AbstractFactory{
 
     @Override
     public raza getRaza(int raza) {
-        switch(raza){
-            case 1:
-                return new gunners();
-            case 2:
-                return new redDevils();
-            case 3:
-                return new kops();
-        }
         return null;
     }
 
@@ -41,8 +33,15 @@ public class razaFactory implements AbstractFactory{
 
     @Override
     public edificacion getEdificacion(int edificacion) {
+        switch(edificacion){
+            case 1:
+                return new Recurso1();
+            case 2:
+                return new Recurso2();
+            case 3:
+                return new Recurso3();
+        }
         return null;
     }
-    
     
 }
