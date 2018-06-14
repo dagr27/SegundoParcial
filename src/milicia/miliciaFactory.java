@@ -5,6 +5,7 @@
  */
 package milicia;
 
+import centroMando.centro;
 import edificacion.edificacion;
 import jugador.jugador;
 import raza.raza;
@@ -39,6 +40,11 @@ public class miliciaFactory implements AbstractFactory {
 
     @Override
     public edificacion getEdificacion(int edificacion) {
+        return null;
+    }
+
+    @Override
+    public centro getCentro(int centro) {
         return null;
     }
     

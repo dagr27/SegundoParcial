@@ -5,6 +5,7 @@
  */
 package segundoparcial;
 
+import centroMando.centroMandoFactory;
 import edificacion.edificacionFactory;
 import jugador.jugadorFactory;
 
@@ -19,6 +20,8 @@ public class FactoryProducer {
                 return new jugadorFactory();
             case "edificacion":
                 return new edificacionFactory();
+            case "centro":
+                return new centroMandoFactory();
         }
         return null;
     }

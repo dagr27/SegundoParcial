@@ -5,6 +5,7 @@
  */
 package segundoparcial;
 
+import centroMando.centro;
 import jugador.jugador;
 import raza.raza;
 
@@ -24,6 +25,11 @@ public class SegundoParcial {
         jugador player2 = factory.getJugador(2);
         player1.welcome();
         player2.welcome();
+        factory = FactoryProducer.getFactory("centro");
+        centro c1 = factory.getCentro(1);
+        centro c2 = factory.getCentro(1);
+        c1.construir(1, fase, 0);
+        c1.construir(2, fase, 1);
         while(true){
             player1.play(fase);
             player2.play(fase);

@@ -9,7 +9,7 @@ package centroMando;
  *
  * @author Daniel Gómez
  */
-public interface centro {
-    centroL listaC = new centroL();
-    void construir(int idUser, int fase, int id);
+public class centro1 {
+    
+    
 }

@@ -5,6 +5,7 @@
  */
 package edificacion;
 
+import centroMando.centro;
 import jugador.jugador;
 import milicia.milicia;
 import raza.raza;
@@ -41,6 +42,11 @@ public class edificacionFactory implements AbstractFactory{
             case 3:
                 return new Recurso3();
         }
+        return null;
+    }
+
+    @Override
+    public centro getCentro(int centro) {
         return null;
     }
     

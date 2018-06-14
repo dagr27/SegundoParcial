@@ -9,6 +9,10 @@ package centroMando;
  *
  * @author Daniel Gómez
  */
-public class base {
+public class base implements centro{
+    @Override
+    public void construir(int idUser, int fase, int id) {
+        listaC.add(id, idUser);
+    }
     
 }

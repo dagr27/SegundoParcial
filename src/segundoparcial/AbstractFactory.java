@@ -5,6 +5,7 @@
  */
 package segundoparcial;
 
+import centroMando.centro;
 import edificacion.edificacion;
 import jugador.jugador;
 import milicia.milicia;
@@ -19,4 +20,5 @@ public interface AbstractFactory {
     raza getRaza(int raza);
     milicia getMilicia(int milicia);
     edificacion getEdificacion(int edificacion);
+    centro getCentro(int centro);
 }
