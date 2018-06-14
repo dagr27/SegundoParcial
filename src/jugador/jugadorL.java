@@ -6,12 +6,16 @@
 package jugador;
 import java.util.ArrayList;
 import java.util.Scanner;
+import segundoparcial.AbstractFactory;
+import segundoparcial.FactoryProducer;
+import segundoparcial.SegundoParcial;
 /**
  *
  * @author Daniel Gómez
  */
 public class jugadorL {
     Scanner leer = new Scanner(System.in);
+    AbstractFactory factory = SegundoParcial.factory;
     private ArrayList<atrJugador> jugador;
     public jugadorL(){
         jugador = new ArrayList<>();
@@ -25,7 +29,20 @@ public class jugadorL {
         System.out.println("Ingrese su nombre");
         player.setNombre(leer.nextLine());
         System.out.println("Seleccione la Raza:");
-        player.setRaza(leer.nextLine());
+        System.out.println("1. Gunners");
+        System.out.println("2. RedDevils");
+        System.out.println("3. Kops");
+        int raza = leer.nextInt();
+        if(raza == 1){
+            factory.getRaza(raza);
+            player.setRaza("Gunners");
+        }else if(raza == 2){
+            factory.getRaza(raza);
+            player.setRaza("RedDevils");
+        }else if(raza == 2){
+            factory.getRaza(raza);
+            player.setRaza("RedDevils");
+        }
         
     }   
     public void add(atrJugador player) throws Exception{

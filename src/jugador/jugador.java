@@ -12,5 +12,5 @@ package jugador;
 public interface jugador {
     menu menu = new menu();
     void welcome();
-    void play();
+    void play(int fase);
 }

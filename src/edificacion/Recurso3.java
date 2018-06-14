@@ -11,8 +11,36 @@ package edificacion;
  */
 public class Recurso3 implements edificacion {
     @Override
-    public void construir(int id, String tipo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void construir(int id, String tipo, int money, int fase) {
+        atrEdificacion edif = new atrEdificacion();
+        int vida = returnVida(tipo);
+        lista.add(id, tipo, vida, fase);
+    }
+    
+    public int returnPrecio(String tipo){
+        switch(tipo){
+            case "Recolector Bismuto":
+                return 1200;
+            case "Recolector Plastilina":
+                return 1200;
+            case "Recoletcor Metal":
+                return 1200;
+                
+        }
+        return 0;
+    }
+    
+    public int returnVida(String tipo){
+        switch(tipo){
+            case "Recolector Bismuto":
+                return 120;
+            case "Recolector Plastilina":
+                return 120;
+            case "Recoletcor Metal":
+                return 120;
+                
+        }
+        return 0;
     }
     
 }

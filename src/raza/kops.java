@@ -10,10 +10,9 @@ package raza;
  * @author Daniel Gómez
  */
 public class kops implements raza {
-    razaL razas = raza.lista;
     @Override
     public void create() {
-        razas.add(3);
+        lista.add(3);
     }
     
 }

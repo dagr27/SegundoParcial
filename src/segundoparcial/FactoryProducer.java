@@ -5,6 +5,7 @@
  */
 package segundoparcial;
 
+import edificacion.edificacionFactory;
 import jugador.jugadorFactory;
 
 /**
@@ -16,6 +17,8 @@ public class FactoryProducer {
         switch(fac){
             case "jugador":
                 return new jugadorFactory();
+            case "edificacion":
+                return new edificacionFactory();
         }
         return null;
     }

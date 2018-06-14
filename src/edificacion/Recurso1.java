@@ -10,11 +10,37 @@ package edificacion;
  * @author Daniel Gómez
  */
 public class Recurso1 implements edificacion{
-    
     @Override
-    public void construir(int id, String tipo) {
+    public void construir(int id, String tipo, int money, int fase) {
         atrEdificacion edif = new atrEdificacion();
-        lista.add(id, tipo);
+        int vida = returnVida(tipo);
+        lista.add(id, tipo, vida, fase);
+    }
+    
+    public int returnPrecio(String tipo){
+        switch(tipo){
+            case "Recolector Oro":
+                return 1000;
+            case "Recolector Perlas":
+                return 1000;
+            case "Recoletcor Metal":
+                return 1000;
+                
+        }
+        return 0;
+    }
+    
+    public int returnVida(String tipo){
+        switch(tipo){
+            case "Recolector Oro":
+                return 100;
+            case "Recolector Perlas":
+                return 100;
+            case "Recoletcor Metal":
+                return 100;
+                
+        }
+        return 0;
     }
     
 }

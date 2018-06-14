@@ -10,10 +10,9 @@ package raza;
  * @author Daniel Gómez
  */
 public class redDevils implements raza{
-    razaL razas = raza.lista;
     @Override
     public void create() {
-        razas.add(2);
+        lista.add(2);
     }
     
 }

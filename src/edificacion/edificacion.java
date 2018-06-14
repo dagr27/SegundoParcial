@@ -12,5 +12,5 @@ package edificacion;
 public interface edificacion {
     atrEdificacion edif = new atrEdificacion();
     edificacionL lista = new edificacionL();
-    void construir(int id, String tipo);
+    void construir(int id, String tipo, int money, int fase);
 }

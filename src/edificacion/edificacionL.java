@@ -18,65 +18,47 @@ public class edificacionL {
     public edificacionL(){
         edif = new ArrayList<>();
     }
-    public void add(int player, String tipo){
+    public void add(int player, String tipo, int vida, int fase){
         atrEdificacion build = new atrEdificacion();
+        edif.add(build);
         build.setId(returnLastId());//Automatico
         build.setPlayer(player);//Parametro
         build.setTipo(tipo);//Parametro
-        build.setVida(returnVida(tipo));//automatico
+        build.setVida(vida);//parametro
+        build.setFase(fase);
+        build.setEstado(0);
         
+    }
+    public void add(atrEdificacion edi) throws Exception{
+        if(edi != null){
+            if (!edif.contains(edi)) {
+                edif.add(edi);               
+            }
+            Exception e = new Exception("No se permiten Duplicados");
+            throw e;
+        }else{
+            throw new Exception("Ingrese un valor correcto");
+        }
     }
     public int returnLastId(){
         int last = edif.size()-1;
         return last +1;       
     }
-    public int returnVida(String tipo){
-        switch(tipo){
-            case "Recolector Oro":
-                return 100;
-            case "Recolector Diamante":
-                return 110;
-            case "Recoletcor Bismuto":
-                return 120;
-            case "Recolector Perlas":
-                return 100;
-            case "Recolector Gemas":
-                return 110;
-            case "Recoletcor Plastilinas":
-                return 120;
-            case "Recolector Algodon":
-                return 100;
-            case "Recolector Cacao":
-                return 110;
-            case "Recoletcor Metal":
-                return 120;
-                
+    public void show(int idPlayer){
+        int count = 1;
+        for(atrEdificacion build : edif) {
+            if(build.getPlayer() == idPlayer && build.getEstado() == 1){
+                System.out.println(count+". Id Edificio:["+build.getId()+"], Tipo: ["+build.getTipo()+"], Vida:["+build.getVida()+"]");
+                count += 1;
+            }
         }
-        return 0;
     }
-    public int returnPrecio(String tipo){
-        switch(tipo){
-            case "Recolector Oro":
-                return 1000;
-            case "Recolector Diamante":
-                return 1100;
-            case "Recoletcor Bismuto":
-                return 1200;
-            case "Recolector Perlas":
-                return 1000;
-            case "Recolector Gemas":
-                return 1100;
-            case "Recoletcor Plastilinas":
-                return 1200;
-            case "Recolector Algodon":
-                return 1000;
-            case "Recolector Cacao":
-                return 1100;
-            case "Recoletcor Metal":
-                return 1200;
-                
+    public void actualizarEstado(int idPlayer, int fase){
+        for(atrEdificacion build : edif) {
+            if(build.getPlayer() == idPlayer && build.getFase() == fase){
+                build.setEstado(1);
+            }
         }
-        return 0;
     }
     
    //Enemigo//
@@ -86,7 +68,7 @@ public class edificacionL {
     public void delete(){
         
     }
-    public void verifyVida(){
+    public void verifyVida(int idUser, int id){
         
     } 
 }

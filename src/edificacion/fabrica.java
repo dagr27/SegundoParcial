@@ -11,8 +11,8 @@ package edificacion;
  */
 public class fabrica implements edificacion{
     @Override
-    public void construir(int id, String tipo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void construir(int id, String tipo, int money, int fase) {
+        
     }
     
     

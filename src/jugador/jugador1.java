@@ -12,8 +12,8 @@ package jugador;
 public class jugador1 implements jugador{
     static jugadorL lista = new jugadorL();
     @Override
-    public void play() {
-        
+    public void play(int fase) {
+        menu.menu(1,fase);
     }
 
     @Override

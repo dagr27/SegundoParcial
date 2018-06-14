@@ -18,11 +18,12 @@ public class atrRaza {
     
     
     public atrRaza(){}
-    public atrRaza(int id, String nombre, String fortaleza, String desc){
+    public atrRaza(int id, String nombre, String fortaleza, String desc, int player){
         this.id = id ;
         this.nombre = nombre;
         this.fortaleza = fortaleza;
         this.descripcion = desc;
+        this.idPlayer = player;
     }
     public void setId(int id){
         this.id = id;
@@ -36,6 +37,9 @@ public class atrRaza {
     public void setDescripcion(String desc){
         this.descripcion = desc;
     }
+    public void setPlayer(int player){
+        this.idPlayer = player;
+    }
     public int getId(){
         return id;
     }
@@ -47,5 +51,8 @@ public class atrRaza {
     }
     public String getDescripcion(){
         return descripcion;
+    }
+    public int getPlayer(){
+        return this.idPlayer;
     }
 }
