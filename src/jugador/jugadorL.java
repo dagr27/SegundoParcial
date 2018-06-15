@@ -59,7 +59,7 @@ public class jugadorL {
     public void show(int id){
         for(atrJugador player : jugador) {
             if(player.id == id){
-                System.out.println("NickName: "+player.usuario+", Nombre: "+player.nombre+", Raza: "+player.Raza);
+                System.out.println("Nombre: "+player.nombre+", Raza: "+player.Raza);
                 break;
             }            
         }

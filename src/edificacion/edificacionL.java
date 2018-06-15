@@ -60,10 +60,43 @@ public class edificacionL {
             }
         }
     }
+    public int recolectarRec1(int id){
+        int count = 0;
+        for(atrEdificacion build : edif) {
+            if(build.getPlayer() == id && (build.getTipo()== "Recolector Oro" || build.getTipo()== "Recolector Perlas" || build.getTipo()== "Recolector Metal" ) && build.getEstado()==1){
+                count+=10;
+            }
+        }
+        return count;
+    }
+    public int recolectarRec2(int id){
+        int count = 0;
+        for(atrEdificacion build : edif) {
+            if(build.getPlayer() == id && (build.getTipo()== "Recolector Diamante" || build.getTipo()== "Recolector Gemas" || build.getTipo()== "Recolector Cacao" ) && build.getEstado()==1){
+                count+=10;
+            }
+        }
+        return count;
+    }
+    public int recolectarRec3(int id){
+        int count = 0;
+        for(atrEdificacion build : edif) {
+            if(build.getPlayer() == id && (build.getTipo()== "Recolector Bismuto" || build.getTipo()== "Recolector Plastilina" || build.getTipo()== "Recolector Metal" ) && build.getEstado()==1){
+                count+=10;
+            }
+        }
+        return count;
+    }
     
    //Enemigo//
-    public void showEnemies(String Player){
-        //Mostrar Tropas del otro jugador
+    public void showEnemies(int idPlayer){
+        int count = 1;
+        for(atrEdificacion build : edif) {
+            if(build.getPlayer() == idPlayer && build.getEstado() == 1){
+                System.out.println(count+". Id Edificio:["+build.getId()+"], Tipo: ["+build.getTipo()+"], Vida:["+build.getVida()+"]");
+                count += 1;
+            }
+        }
     }
     public void delete(){
         

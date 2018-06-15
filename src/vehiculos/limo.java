@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edificacion;
+package vehiculos;
 
 /**
  *
  * @author Daniel Gómez
  */
-public class fabrica implements edificacion{
-    @Override
-    public void construir(int id, String tipo, int money, int fase) {
-        
-    }
-    
+public class limo {
     
 }

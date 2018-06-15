@@ -5,6 +5,10 @@
  */
 package edificacion;
 
+import centroMando.centro;
+import centroMando.centroL;
+import static edificacion.edificacion.centroL;
+
 /**
  *
  * @author Daniel Gómez
@@ -12,5 +16,7 @@ package edificacion;
 public interface edificacion {
     atrEdificacion edif = new atrEdificacion();
     edificacionL lista = new edificacionL();
+    centroL centroL= centro.listaC;
     void construir(int id, String tipo, int money, int fase);
+    void recolectar(int id, String tipo, int fase);
 }

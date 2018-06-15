@@ -28,8 +28,8 @@ public class SegundoParcial {
         factory = FactoryProducer.getFactory("centro");
         centro c1 = factory.getCentro(1);
         centro c2 = factory.getCentro(1);
-        c1.construir(1, fase, 0);
-        c1.construir(2, fase, 1);
+        c1.construir(1, fase, 1);
+        c2.construir(2, fase, 2);
         while(true){
             player1.play(fase);
             player2.play(fase);

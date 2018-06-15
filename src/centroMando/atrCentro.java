@@ -33,7 +33,7 @@ public class atrCentro {
         this.id = id;
     }
     public void setIdUser(int iduser){
-        this.id = iduser;
+        this.idUser = iduser;
     }
     public void setNivel(int nivel){
         this.nivel = nivel;

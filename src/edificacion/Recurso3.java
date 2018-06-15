@@ -13,8 +13,13 @@ public class Recurso3 implements edificacion {
     @Override
     public void construir(int id, String tipo, int money, int fase) {
         atrEdificacion edif = new atrEdificacion();
-        int vida = returnVida(tipo);
-        lista.add(id, tipo, vida, fase);
+        if(money >= returnPrecio(tipo)){    
+            int vida = returnVida(tipo);
+            lista.add(id, tipo, vida, fase);
+            centroL.CobrarRec1(id, returnPrecio(tipo));
+        }else{
+            System.out.println("El money no le ajusta");
+        }
     }
     
     public int returnPrecio(String tipo){
@@ -41,6 +46,15 @@ public class Recurso3 implements edificacion {
                 
         }
         return 0;
+    }
+
+    @Override
+    public void recolectar(int id, String tipo, int fase) {
+        if(fase!=5){
+            int total = lista.recolectarRec3(id);
+            centroL.AbonarR3(id, total);
+            System.out.println("Se abonaron del Recurso 3: "+total);
+        }
     }
     
 }

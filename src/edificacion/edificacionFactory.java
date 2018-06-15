@@ -41,6 +41,10 @@ public class edificacionFactory implements AbstractFactory{
                 return new Recurso2();
             case 3:
                 return new Recurso3();
+            case 4:
+                return new fabricaVehiculo();
+            case 5:
+                return new fabricaTropas();
         }
         return null;
     }
